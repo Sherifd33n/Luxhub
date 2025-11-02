@@ -8,7 +8,7 @@ import Luxury from "@/components/luxury";
 import MiniAbout from "@/components/mini-about";
 import OurBlog from "@/components/our-blog";
 // import Pearl from "@/components/pearl";
-import Room from "@/components/room";
+// import Room from "@/components/room";
 // import Services from "@/components/services";
 import Testimonials from "@/components/testimonials";
 import Tour from "@/components/tour";
@@ -44,7 +44,7 @@ const Home = () => {
 
       <Testimonials />
 
-      <Room />
+      {/* <Room /> */}
       <Tour />
 
       <OurBlog />

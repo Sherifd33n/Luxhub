@@ -119,7 +119,7 @@ const Blog = () => {
                       key={id}
                       href={`/single-blog/${blog.slug}`}
                       className="hover:text-red-500">
-                      <p className="text-sm truncate">{blog.text}</p>
+                      <p className="text-sm">{blog.title}</p>
                       <p className="text-[13px]">{blog.date}</p>
                     </Link>
                   ))}

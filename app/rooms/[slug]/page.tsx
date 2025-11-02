@@ -7,13 +7,23 @@ import { rooms } from "@/data/rooms";
 import Container from "@/components/Container";
 import { Button } from "@/components/ui/button";
 import { DropDown } from "@/components/drop-down";
-import { Baby, BedDouble, CircleCheck, CircleUser, CheckCircle2 } from "lucide-react";
+import {
+  Baby,
+  BedDouble,
+  CircleCheck,
+  CircleUser,
+  CheckCircle2,
+} from "lucide-react";
 import { DatePicker } from "@/components/date-picker";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 export default function RoomPage({ params }: { params: { slug: string } }) {
-
-    const [checkIn, setCheckIn] = useState<Date | null>(null);
+  const [checkIn, setCheckIn] = useState<Date | null>(null);
   const [checkOut, setCheckOut] = useState<Date | null>(null);
   const [adult, setAdult] = useState<string | null>(null);
   const [child, setChild] = useState<string | null>(null);
@@ -23,7 +33,6 @@ export default function RoomPage({ params }: { params: { slug: string } }) {
   const room = rooms.find((r) => r.slug === params.slug);
   const router = useRouter();
   if (!room) return notFound();
-
 
   const allSelected = checkIn && checkOut && adult && child && roomType;
 
@@ -53,7 +62,7 @@ export default function RoomPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <Container className="p-10 pt-[100px] gap-[10px] flex flex-col lg:flex-row">
+      <Container className="py-[100px] gap-[10px] flex flex-col lg:flex-row">
         {/* Room Details Section */}
         <div>
           <img
@@ -73,8 +82,7 @@ export default function RoomPage({ params }: { params: { slug: string } }) {
               {room.features.map((feature, i) => (
                 <li
                   key={i}
-                  className="list-none border py-[7px] rounded-[3px] px-[20px]"
-                >
+                  className="list-none border py-[7px] rounded-[3px] px-[20px]">
                   {feature}
                 </li>
               ))}
@@ -84,7 +92,7 @@ export default function RoomPage({ params }: { params: { slug: string } }) {
 
         {/* Booking Form Section */}
         <div>
-          <div className="bg-blue-50 rounded-[10px] md:w-[500px] mx-auto p-[30px] w-full mt-[20px] text-center lg:text-left">
+          <div className="bg-blue-100 rounded-[10px] md:w-[500px] mx-auto p-[30px] w-full mt-[20px] text-center lg:text-left">
             <p className="text-[14px] text-button_brown font-semibold">
               Book A Room
             </p>
@@ -165,8 +173,7 @@ export default function RoomPage({ params }: { params: { slug: string } }) {
                   allSelected
                     ? "bg-button_brown hover:bg-button_brown/90"
                     : "bg-gray-400 cursor-not-allowed"
-                }`}
-              >
+                }`}>
                 BOOK TABLE NOW
               </Button>
             </div>
@@ -184,13 +191,13 @@ export default function RoomPage({ params }: { params: { slug: string } }) {
             </DialogTitle>
           </DialogHeader>
           <p className="text-gray-600 mt-2">
-            Your room has been successfully booked. You can view all your booked rooms.
+            Your room has been successfully booked. You can view all your booked
+            rooms.
           </p>
           <div className="mt-6 flex justify-center">
             <Button
               onClick={handleGoToBookings}
-              className="bg-button_brown text-white px-6"
-            >
+              className="bg-button_brown text-white px-6">
               Go to My Bookings
             </Button>
           </div>

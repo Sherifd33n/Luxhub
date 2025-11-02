@@ -54,9 +54,12 @@ const SideMenu: FC<SidebarProps> = ({ isOpen, onClose }) => {
           ))}
         </div>
 
-        <Button className="bg-button_brown px-[30px] cursor-pointer">
-          Reservation
-        </Button>
+        <Link href="/booked-rooms" onClick={onClose}>
+          {" "}
+          <Button className="bg-button_brown px-[30px] cursor-pointer w-full">
+            Reservation
+          </Button>
+        </Link>
       </div>
     </div>
   );
