@@ -80,7 +80,7 @@ const HomeRight = () => {
         <div className="mt-[30px] mx-auto flex justify-center md:justify-start">
           <Button
             size={"lg"}
-            className="text-white bg-button_brown w-[300px] md:w-[200px]">
+            className="text-white bg-button_brown w-[200px] md:w-[200px]">
             CHECK AVAILABILITY
           </Button>
         </div>
